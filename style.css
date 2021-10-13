@@ -1,0 +1,100 @@
+body{ 
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background: #131313;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150px;
+    margin:0;
+    padding:0;
+ 
+  }
+  
+ 
+  
+  button {
+      border:2px #fff solid;
+      background:none;
+      font-size:16px;
+      padding:10px 20px;
+      color:#fff;
+      margin:20px;
+  }
+  
+  .glitch {
+    font-size: 130px;
+    line-height: 1;
+    font-family: 'Expletus Sans', sans-serif;
+    font-weight: 900;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 20px;
+    text-decoration: none;
+    color: rgb(255, 145, 0);
+      cursor:pointer;
+      letter-spacing:0.04em;
+  }
+  
+  .animated {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+  
+  
+  .glitch:before, .glitch:after {
+      display: block;
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      opacity: .8;
+  }
+  
+  .glitch:after {
+      color: rgb(129, 21, 129);
+      z-index: -2;
+    }
+  
+  .glitch:before {
+      color: #0ff;
+      z-index: -1;
+    }
+  
+  .glitch:before {
+      animation: glitch .4s cubic-bezier(.25, .46, .45, .94) both infinite
+  }
+  
+  .glitch:after {
+      animation: glitch .4s cubic-bezier(.25, .46, .45, .94) both reverse infinite
+  }
+  
+  @keyframes glitch {
+      0% {
+          transform: translate(0)
+      }
+      20% {
+          transform: translate(-3px, 3px)
+      }
+      40% {
+          transform: translate(-3px, -3px)
+      }
+      60% {
+          transform: translate(3px, 3px)
+      }
+      80% {
+          transform: translate(3px, -3px)
+      }
+      to {
+          transform: translate(0)
+      }
+  }
